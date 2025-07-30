@@ -8,6 +8,7 @@ It integrates various Azure services to build a modern data platform for healthc
 
 ## 🚀 Architecture Overview
 
+![Data Warehouse Architecture](./docs/Azure_Healthcare_Medallion_Architecture.png)
 ---
 
 ## 📁 Data Sources
