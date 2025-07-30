@@ -8,40 +8,6 @@ It integrates various Azure services to build a modern data platform for healthc
 
 ## 🚀 Architecture Overview
 
-            +----------------------+
-            |     Data Sources     |
-            +----------------------+
-SQL (EMR) | CSV (Claims/CPT) | APIs (NPI/ICD)
-| | | | |
-v v v v v
-+------------------------------------------------------+
-| Landing / Raw Layer |
-| (Azure Data Factory dumps files in ADLS Gen2) |
-+------------------------------------------------------+
-|
-v
-+--------------------- Bronze Layer --------------------+
-| - Format: Parquet |
-| - Source of Truth |
-| - Simple schema changes only |
-+------------------------------------------------------+
-|
-v
-+--------------------- Silver Layer --------------------+
-| - Format: Delta Tables |
-| - CDM (Common Data Model) |
-| - SCD2 Implementations |
-| - Quality Checks / Quarantine |
-+------------------------------------------------------+
-|
-v
-+---------------------- Gold Layer ---------------------+
-| - Fact and Dimension Tables |
-| - Business-ready for BI Tools |
-| - is_current = true, is_quarantined = false |
-+------------------------------------------------------+
-
-
 ---
 
 ## 📁 Data Sources
